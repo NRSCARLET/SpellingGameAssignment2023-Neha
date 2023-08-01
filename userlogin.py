@@ -1,5 +1,6 @@
 import sys 
 import tkinter as tk 
+#PrintLogger code from Quora
 class PrintLogger: 
     def __init__(self, textbox): 
         self.textbox = textbox 
@@ -14,18 +15,19 @@ textbox.pack()
  
 printlogger = PrintLogger(textbox) 
 sys.stdout = printlogger 
- 
-# print("Hello, world!")  # This will appear in the Text widgetroot.mainloop()
+class Userlogin:
+    def __init__(self, name, highscore):
+        self.name = name
+        self.highscore = highscore
 
-window = tk.Tk()
-window.title("Button Speller")
-window.geometry("300x300")
 
 hello = tk.Label(text="Welcome to the spelling game!")
 hello.pack()
 
 def login():
-    print("Hello Tester")
+    print("Please input a username")
+    E1 = Entry(root, width = 50)
+    E1.pack(side = RIGHT)
 
 
 userbutton = tk.Button(text="User Login", 
@@ -33,10 +35,5 @@ userbutton = tk.Button(text="User Login",
 userbutton.pack()
  
 tk.mainloop()
-class Userlogin:
-    def __init__(self, name, highscore):
-        self.name = name
-        self.highscore = highscore
-
 
     
