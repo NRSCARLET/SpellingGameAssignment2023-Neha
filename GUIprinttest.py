@@ -1,6 +1,8 @@
 from tkinter import *
 import tkinter as tk
 def printGUI():
+    hello.destroy()
+    button.destroy()
     label = Label(text="Hello")
     label.pack()
 window = tk.Tk()
