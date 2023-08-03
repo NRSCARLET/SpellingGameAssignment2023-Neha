@@ -1,7 +1,6 @@
-import sys 
-import tkinter as tk 
+import tkinter as tk
 #PrintLogger code from Quora
-class PrintLogger: 
+"""class PrintLogger: 
     def __init__(self, textbox): 
         self.textbox = textbox 
  
@@ -14,22 +13,23 @@ textbox = tk.Text(root)
 textbox.pack() 
  
 printlogger = PrintLogger(textbox) 
-sys.stdout = printlogger 
-class Userlogin:
+sys.stdout = printlogger""" 
+class Userinfo:
     def __init__(self, name, highscore):
         self.name = name
         self.highscore = highscore
+def login():
+    TKWindow = tk.TK()
+    TKWindow.geometry('300x300')
+    usernameLabel = Label(tkWindow, text="Choose your username")
+    usernameLabel.pack()
+    usernameEntry = Entry(tkWindow, textvariable=username)
+    usernameEntry.pack()
 
-
+mainWindow = tk()
+mainWindow.geometry('300x300')
 hello = tk.Label(text="Welcome to the spelling game!")
 hello.pack()
-
-def login():
-    print("Please input a username")
-    E1 = Entry(root, width = 50)
-    E1.pack(side = RIGHT)
-
-
 userbutton = tk.Button(text="User Login", 
                    command=login)
 userbutton.pack()
